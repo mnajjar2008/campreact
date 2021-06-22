@@ -16,4 +16,6 @@ import 'font-awesome/css/font-awesome.css'
 yarn add bootstrap-social@5.1.1
 import 'bootstrap-social/bootstrap-social.css'
 
+yarn add react-router-dom@5.2.0
+
 
