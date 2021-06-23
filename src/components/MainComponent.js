@@ -10,6 +10,7 @@ import Footer from './FooterComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import Home from './HomeComponent';
 import Contact from './ContactComponent';
+import About from './AboutComponent';
 
 class Main extends Component {
     constructor(props) {
@@ -38,6 +39,7 @@ class Main extends Component {
                     <Route exact path="/directory" render={() => <Directory campsites={this.state.campsites} />} />
                     <Route path="/directory/:campsiteId" component={CampsiteWithId} />
                     <Route exact path="/contactus" component={Contact} />
+                    <Route exact path="/aboutus" render={() => <About partners={this.state.partners} />} />
                     <Redirect to="/home" />
                 </Switch>
                 <Footer />
