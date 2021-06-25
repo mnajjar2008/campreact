@@ -18,4 +18,6 @@ import 'bootstrap-social/bootstrap-social.css'
 
 yarn add react-router-dom@5.2.0
 
+yarn add redux@4.0.5
+yarn add react-redux@7.2.0
 
