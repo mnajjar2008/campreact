@@ -8,6 +8,7 @@ import Contact from './ContactComponent';
 import About from './AboutComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { addComment } from '../redux/ActionCreators';
 
 const mapStateToProps = state => {
     return {
@@ -18,13 +19,23 @@ const mapStateToProps = state => {
     };
 };
 
+const mapDispatchToProps = {
+    addComment: (campsiteId, rating, author, text) => addComment(campsiteId, rating, author, text),
+};
+
 class Main extends Component {
     render() {
         const HomePage = () => {
             return <Home campsite={this.props.campsites.filter(campsite => campsite.featured)[0]} promotion={this.props.promotions.filter(promotion => promotion.featured)[0]} partner={this.props.partners.filter(partner => partner.featured)[0]} />;
         };
         const CampsiteWithId = props => {
-            return <CampsiteInfo campsite={this.props.campsites.filter(campsite => campsite.id === +props.match.params.campsiteId)[0]} comments={this.props.comments.filter(comment => comment.campsiteId === +props.match.params.campsiteId)} />;
+            return (
+                <CampsiteInfo
+                    campsite={this.props.campsites.filter(campsite => campsite.id === +props.match.params.campsiteId)[0]}
+                    comments={this.props.comments.filter(comment => comment.campsiteId === +props.match.params.campsiteId)}
+                    addComment={this.props.addComment}
+                />
+            );
         };
 
         return (
@@ -44,4 +55,4 @@ class Main extends Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
