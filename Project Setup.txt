@@ -26,3 +26,6 @@ yarn add react-redux-form@1.16.14
 
 yarn add redux-thunk@2.3.0
 yarn add redux-logger@3.0.6
+
+yarn global add json-server
+json-server -H 0.0.0.0 --watch db.json -p 3001 -d 2000
