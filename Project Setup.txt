@@ -32,3 +32,5 @@ json-server -H 0.0.0.0 --watch db.json -p 3001 -d 2000
 
 yarn add react-transition-group@4.4.1
 
+yarn add react-animation-components@3.0.0
+yarn add prop-types@15.7.2
