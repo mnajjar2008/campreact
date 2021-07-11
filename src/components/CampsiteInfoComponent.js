@@ -89,8 +89,6 @@ class CommentForm extends Component {
 }
 
 function RenderCampsite(props) {
-    // const {campsite}=props
-    //const {description,name,image}=campsite
     return (
         <div className="col-md-5 m-1">
             <FadeTransform

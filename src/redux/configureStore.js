@@ -1,4 +1,4 @@
-import {createStore, combineReducers, applyMiddleware} from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Campsites } from './campsites';
 import { Comments } from './comments';
 import { Partners } from './partners';
@@ -16,9 +16,10 @@ export const ConfigureStore = () => {
             partners: Partners,
             promotions: Promotions,
             ...createForms({
-                feedbackForm: InitialFeedback})
+                feedbackForm: InitialFeedback,
+            }),
         }),
-        applyMiddleware(thunk, logger)
+        applyMiddleware(thunk),
     );
 
     return store;
