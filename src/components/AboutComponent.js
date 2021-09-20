@@ -1,15 +1,15 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { baseUrl } from '../shared/baseUrl';
+import { baseUrlImages } from '../shared/baseUrl';
 import { Loading } from './LoadingComponent';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { Fade, Stagger } from 'react-animation-components';
 
 function RenderPartner({ partner }) {
     if (partner) {
         return (
             <React.Fragment>
-                <Media object src={baseUrl + partner.image} alt={partner.name} width="150" />
+                <Media object src={baseUrlImages + partner.image} alt={partner.name} width="150" />
                 <Media className="ml-5 mb-4" body>
                     {partner.description}
                     <Media heading>{partner.name}</Media>
