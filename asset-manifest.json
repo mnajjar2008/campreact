@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/campreact/static/css/main.a0bea6d2.chunk.css",
-    "main.js": "/campreact/static/js/main.9b43bf2c.chunk.js",
-    "main.js.map": "/campreact/static/js/main.9b43bf2c.chunk.js.map",
+    "main.js": "/campreact/static/js/main.175fa47b.chunk.js",
+    "main.js.map": "/campreact/static/js/main.175fa47b.chunk.js.map",
     "runtime-main.js": "/campreact/static/js/runtime-main.e6a3f5b0.js",
     "runtime-main.js.map": "/campreact/static/js/runtime-main.e6a3f5b0.js.map",
     "static/css/2.fea45e15.chunk.css": "/campreact/static/css/2.fea45e15.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.fea45e15.chunk.css",
     "static/js/2.be44d0d0.chunk.js",
     "static/css/main.a0bea6d2.chunk.css",
-    "static/js/main.9b43bf2c.chunk.js"
+    "static/js/main.175fa47b.chunk.js"
   ]
 }
