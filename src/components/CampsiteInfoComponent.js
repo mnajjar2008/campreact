@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, Breadcrumb, BreadcrumbItem, Button, 
 import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
+import { baseUrlImages } from '../shared/baseUrl';
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const maxLength = len => val => !val || val.length <= len;
@@ -98,7 +98,7 @@ function RenderCampsite(props) {
                 }}
             >
                 <Card>
-                    <CardImg top src={baseUrl + props.campsite.image} alt={props.campsite.name} />
+                    <CardImg top src={baseUrlImages + props.campsite.image} alt={props.campsite.name} />
                     <CardBody>
                         <CardText>{props.campsite.description}</CardText>
                     </CardBody>

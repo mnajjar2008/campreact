@@ -33,10 +33,10 @@ const mapDispatchToProps = {
 
 class Main extends Component {
     componentDidMount() {
-        this.props.fetchCampsites();
-        this.props.fetchComments();
-        this.props.fetchPromotions();
-        this.props.fetchPartners();
+        setTimeout(() => this.props.fetchCampsites(), 3000);
+        setTimeout(() => this.props.fetchComments(), 3000);
+        setTimeout(() => this.props.fetchPromotions(), 3000);
+        setTimeout(() => this.props.fetchPartners(), 3000);
     }
 
     render() {
